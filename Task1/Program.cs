@@ -4,16 +4,16 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        int[] numbers = { 1, 2, 3, 4, 5 };
+        int[] b = { 1, 2, 3, 4, 5 };
         double sum = 0;
         
 
         ///////modified loop
-        for (int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < b.Length; i++)
         {
             if 
             {
-                sum += numbers[i];
+                sum += b[i];
             }
 
            
@@ -21,7 +21,7 @@ public class Program
         }
 
 
-        double average = sum / numbers.Length;
+        double average = sum / b.Length;
 
 
         Console.WriteLine($"Average: {average}");

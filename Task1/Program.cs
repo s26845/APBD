@@ -5,24 +5,29 @@ public class Program
     public static void Main(string[] args)
     {
         int[] numbers = { 1, 2, 3, 4, 5 };
-        double average = CalculateAverage(numbers);
-        Console.WriteLine($"The average is: {average}");
+        int max = FindMaximum(numbers);
+        Console.WriteLine($"The max value  is: {max}");
     }
 
-    
-    public static double CalculateAverage(int[] nums)
+    public static int FindMaximum(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
             throw new ArgumentException("Array cannot be null or empty", nameof(nums));
         }
 
-        double sum = 0;
+        int max = nums[0];
         foreach (int num in nums)
         {
-            sum += num;
+            if (num > max)
+            {
+                max = num;
+            }
         }
 
-        return sum / nums.Length;
+        return max;
     }
-}
+    }
+
+    
+    

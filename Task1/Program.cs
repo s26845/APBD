@@ -5,29 +5,27 @@ public class Program
     public static void Main(string[] args)
     {
         int[] numbers = { 1, 2, 3, 4, 5 };
-        int max = FindMaximum(numbers);
-        Console.WriteLine($"The max value  is: {max}");
-    }
+        double sum = 0;
+        
 
-    public static int FindMaximum(int[] nums)
-    {
-        if (nums == null || nums.Length == 0)
+        ///////modified loop
+        for (int i = 0; i < numbers.Length; i++)
         {
-            throw new ArgumentException("Array cannot be null or empty", nameof(nums));
-        }
-
-        int max = nums[0];
-        foreach (int num in nums)
-        {
-            if (num > max)
+            if (numbers[i] % 2 == 0)
             {
-                max = num;
+                sum += numbers[i];
             }
+
+           
+            
         }
 
-        return max;
-    }
-    }
 
-    
-    
+        double average = sum / numbers.Length;
+
+
+        Console.WriteLine($"Average: {average}");
+        Console.WriteLine("sum of even " +sum);
+        
+    }
+}

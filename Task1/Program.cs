@@ -11,7 +11,7 @@ public class Program
         ///////modified loop
         for (int i = 0; i < numbers.Length; i++)
         {
-            if (numbers[i] % 2 == 0)
+            if 
             {
                 sum += numbers[i];
             }

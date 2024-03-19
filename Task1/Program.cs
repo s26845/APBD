@@ -25,7 +25,7 @@ public class Program
 
 
         Console.WriteLine($"Average: {average}");
-        Console.WriteLine("sum of even " +sum);
+        
         
     }
 }

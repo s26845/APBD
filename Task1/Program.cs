@@ -27,5 +27,6 @@ public class Program
         Console.WriteLine($"Average: {average}");
         
         
+        
     }
 }

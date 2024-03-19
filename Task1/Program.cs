@@ -1,8 +1,28 @@
-﻿
-Console.WriteLine("Hello, World!");
+﻿using System;
 
-string str = "33";
-int a;
-int.TryParse(str, out a);
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        double average = CalculateAverage(numbers);
+        Console.WriteLine($"The average is: {average}");
+    }
 
-Console.WriteLine(a);
+    
+    public static double CalculateAverage(int[] nums)
+    {
+        if (nums == null || nums.Length == 0)
+        {
+            throw new ArgumentException("Array cannot be null or empty", nameof(nums));
+        }
+
+        double sum = 0;
+        foreach (int num in nums)
+        {
+            sum += num;
+        }
+
+        return sum / nums.Length;
+    }
+}
